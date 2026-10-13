@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: nexus-edge-worker
+    runtime: node
+    plan: free
+    buildCommand: "npm install --omit=dev"
+    startCommand: "npm start"
+    envVars:
+      - key: NEXUS_TOKEN
+        sync: false
